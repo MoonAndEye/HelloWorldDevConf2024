@@ -42,6 +42,10 @@ class WritingToolsViewController: UIViewController {
     }
 }
 
+extension WritingToolsViewController: UITextFieldDelegate {
+    
+}
+
 extension WritingToolsViewController: UITextViewDelegate {
     
     func textViewWritingToolsWillBegin(_ textView: UITextView) {

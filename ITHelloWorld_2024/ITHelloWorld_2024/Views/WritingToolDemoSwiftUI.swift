@@ -13,7 +13,7 @@ struct WritingToolDemoSwiftUI: View {
     
     var body: some View {
         
-        TextEditor(text: $text)
+        TextField("Please enter your text", text: $text)
             .padding()
             .border(.red)
     }
