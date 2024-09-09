@@ -36,6 +36,23 @@ struct FeatureListView: View {
                         TranslationContentView()
                     } label: {
                         Text("Transition Demo")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    NavigationLink {
+                        ImageClassify()
+                    } label: {
+                        Text("Image Classify")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
                     }
                     .foregroundColor(.white)
                     .padding()
