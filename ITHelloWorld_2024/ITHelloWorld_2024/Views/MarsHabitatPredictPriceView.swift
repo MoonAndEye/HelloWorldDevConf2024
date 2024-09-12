@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+let marsHabitatPricer: MarsHabitatPricer? = {
+    try? MarsHabitatPricer(configuration: .init())
+}()
+
 struct MarsHabitatPredictPriceView: View {
-    
-    let marsHabitatPricer = try? MarsHabitatPricer(configuration: .init())
     
     let selectedGreenHouseDataSource: GreenhousesDataSource = .init()
     @State var selectedGreenHouse: Int = 0
@@ -33,7 +35,7 @@ struct MarsHabitatPredictPriceView: View {
     var predictdPrice: Double {
         
         guard let marsHabitatPricer = marsHabitatPricer else {
-            fatalError("The Mars Habitat Pricer failed to load.")
+            return -1
         }
 
         do {
@@ -50,7 +52,10 @@ struct MarsHabitatPredictPriceView: View {
     }
     
     var valueString: String {
-        priceFormatter.string(for: predictdPrice) ?? "-"
+        if predictdPrice < 0 {
+            return "-"
+        }
+        return priceFormatter.string(for: predictdPrice) ?? "-"
     }
 
     var body: some View {

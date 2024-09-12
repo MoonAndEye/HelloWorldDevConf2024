@@ -12,26 +12,6 @@ struct FeatureListView: View {
         NavigationView {
             ScrollView {
                 VStack {
-#if canImport(UIKit)
-                    NavigationLink() {
-                        WritingToolDemo()
-                    } label: {
-                        Text("Writing Tool Demo")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    }
-#endif
-                    NavigationLink {
-                        WritingToolDemoSwiftUI()
-                    } label: {
-                        Text("Wrtiting Tool Demo SwiftUI")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    }
                     NavigationLink {
                         TranslationContentView()
                     } label: {
