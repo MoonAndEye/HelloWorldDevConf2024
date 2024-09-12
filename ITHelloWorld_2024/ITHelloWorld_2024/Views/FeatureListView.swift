@@ -58,6 +58,19 @@ struct FeatureListView: View {
                     .padding()
                     .background(Color.blue)
                     .cornerRadius(10)
+                    NavigationLink {
+                        MarsHabitatPredictPriceView()
+                    } label: {
+                        Text("Mars Habitat Predict")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(10)
                 }
                 .toolbar {
                     ToolbarItem(placement: .principal) {
