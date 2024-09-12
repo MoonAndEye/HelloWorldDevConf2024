@@ -43,7 +43,7 @@ struct TranslationContentView: View {
                     NavigationLink {
                         BatchOfStringsView()
                     } label: {
-                        RowView(title: "Batch All at Once",
+                        RowView(title: "(需使用 demo project, 放入專案後有些時候運作不正常)Batch All at Once",
                                 subtitle: "Translate a batch of strings.",
                                 imageName: "line.3.horizontal")
                     }
